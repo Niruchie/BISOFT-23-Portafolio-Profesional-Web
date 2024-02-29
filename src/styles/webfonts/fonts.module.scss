@@ -1,0 +1,14 @@
+@import "../defaults.module.scss";
+
+@font-face {
+    font-family: 'Milky Nice Clean';
+    src: url(/src/styles/webfonts/MilkyNice.clean.ttf);
+}
+
+.mnc {
+    font-family: 'Milky Nice Clean', sans-serif !important;
+}
+
+body * {
+    font-family: 'Open sans', sans-serif !important;
+}

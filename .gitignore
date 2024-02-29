@@ -1,0 +1,57 @@
+# {
+# 	"files.exclude": {
+# 		"**/.git": true,
+# 		"**/.svn": true,
+# 		"**/.hg": true,
+# 		"**/CVS": true,
+# 		"**/.DS_Store": true,
+# 		"**/Thumbs.db": true,
+# 		"**/.classpath": true,
+# 		"**/.factorypath": true,
+# 		"**/.project": true,
+# 		"**/.settings": true,
+# 		"**/node_modules": true,
+# 		"**/.parcel-cache": true,
+# 		"**/.cache": true,
+# 		"**/dist": true,
+# 		"**/build": true,
+# 		"**/target": true,
+# 		"**/out": true,
+# 		"**/.vscode": true
+# 	}
+# }
+
+# Mac OS
+**/.DS_Store
+**/Thumbs.db
+
+# Cache and logs
+**/.parcel-cache
+**/.cache
+**/cache
+**/logs
+**/*.log
+
+# Build results
+**/out
+**/dist
+**/build
+**/target
+
+# Node.js
+**/node_modules
+**/bower_components
+
+# Backup files
+**/*.backup.*
+**/*.back.*
+**/*.bak.*
+**/*.old.*
+
+# IDE files
+*.sublime*
+
+# Other
+sketch
+thumb
+psd

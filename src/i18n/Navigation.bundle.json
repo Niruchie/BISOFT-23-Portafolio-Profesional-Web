@@ -1,0 +1,27 @@
+{
+	"$meta": {
+		"name": "Navigation",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"settings": "Settings",
+		"home": "Home",
+		"profile": "Profile",
+		"studies": "Studies",
+		"tools": "Tools",
+		"projects": "Projects",
+		"spanish": "Spanish",
+		"english": "English"
+	},
+	"es": {
+		"settings": "Configuración",
+		"home": "Inicio",
+		"profile": "Perfil",
+		"studies": "Estudios",
+		"tools": "Herramientas",
+		"projects": "Proyectos",
+		"spanish": "Español",
+		"english": "Inglés"
+	}
+}

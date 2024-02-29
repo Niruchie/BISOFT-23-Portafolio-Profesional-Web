@@ -1,0 +1,16 @@
+@import './defaults.module.scss';
+@import './webfonts/fonts.module.scss';
+
+.nav-bar {
+	background-color: #171c2b !important;
+	box-sizing: border-box !important;
+	padding: 10px;
+}
+
+.nav-item {
+	border-radius: 10px;
+
+	// &[data-active='true'] {
+	// 	background-color: rgba(128, 128, 128, 0.3);
+	// }
+}

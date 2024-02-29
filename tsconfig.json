@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"module": "commonjs",
+		"jsx": "preserve",
+		"sourceMap": true,
+		"allowJs": true,
+		"lib": [
+			"es6",
+			"dom"
+		],
+		"rootDir": "src",
+		"moduleResolution": "node",
+		"plugins": [
+			{
+				"name": "typescript-plugin-css-modules"
+			}
+		]
+	},
+	"exclude": [
+		"node_modules",
+		"build",
+		"dist"
+	]
+}
