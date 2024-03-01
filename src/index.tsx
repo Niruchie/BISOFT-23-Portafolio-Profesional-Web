@@ -19,26 +19,20 @@ function App() {
 	const contentSize = useMemo(() => {
 		if (isMediumDevice)
 			// ? Bootstrap 5: Navbar expand breakpoint
-			return ({
-				"min-height": '50vh',
-				"height": 'calc(100vh - 80px)',
-			});
+			return ({ "minHeight": 'calc(100vh - 80px)' });
 		else
 			// ? Bootstrap 5: Navbar collapse breakpoint
-			return ({
-				"min-height": '50vh',
-				"height": 'calc(100vh - 56px)',
-			});
+			return ({ "minHeight": 'calc(100vh - 56px)' });
 	}, [isMediumDevice]);
 
 	return (
 		<Container fluid
 			className='m-0 p-0 g-0'
-			style={{ height: '100vh' }}>
+			style={{ height: '100vh', width: '100vw' }}>
 			<Navigation />
-			<div style={{ height: isMediumDevice ? '80px' : '56px' }} />
+			<div style={{ height: isMediumDevice ? '80px' : '55px' }} />
 			<Container fluid
-				className='w-100 p-0 g-0'
+				className='w-100 h-100 p-0 g-0'
 				style={contentSize}>
 				<Home />
 				<Tools />
