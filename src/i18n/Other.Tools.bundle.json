@@ -1,0 +1,37 @@
+{
+	"$meta": {
+		"name": "Tools.Other",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"title": "Design, Cloud & DevOps",
+		"figma": "Figma",
+		"figmaDesc": "Web-based vector graphics editor and prototyping tool",
+		"illustrator": "Adobe Illustrator",
+		"illustratorDesc": "Private vector graphics editor developed and marketed by Adobe Inc.",
+		"azureDevOps": "Azure DevOps",
+		"azureDevOpsDesc": "Software as a service (SaaS) platform in the cloud",
+		"git": "Git",
+		"gitDesc": "Version control system used by developers all over the world",
+		"github": "GitHub",
+		"githubDesc": "Web-based version-control and collaboration platform and repository hosting service",
+		"jira": "Jira Software",
+		"jiraDesc": "Proprietary issue tracking product developed by Atlassian"
+	},
+	"es": {
+		"title": "Diseño, Nube y DevOps",
+		"figma": "Figma",
+		"figmaDesc": "Editor de gráficos vectoriales basado en la web y herramienta de prototipado",
+		"illustrator": "Adobe Illustrator",
+		"illustratorDesc": "Editor de gráficos vectoriales privado desarrollado y comercializado por Adobe Inc.",
+		"azureDevOps": "Azure DevOps",
+		"azureDevOpsDesc": "Plataforma de software como servicio (SaaS) en la nube",
+		"git": "Git",
+		"gitDesc": "Sistema de control de versiones utilizado por desarrolladores de todo el mundo",
+		"github": "GitHub",
+		"githubDesc": "Plataforma de control de versiones y colaboración basada en la web y servicio de alojamiento de repositorios",
+		"jira": "Jira Software",
+		"jiraDesc": "Producto de seguimiento de problemas propietario desarrollado por Atlassian"
+	}
+}

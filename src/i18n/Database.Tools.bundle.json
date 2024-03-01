@@ -1,0 +1,37 @@
+{
+	"$meta": {
+		"name": "Tools.Database",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"title": "Database",
+		"dbeaver": "DBeaver",
+		"microsoftsqlserver": "Microsoft SQL Server",
+		"mysql": "MySQL",
+		"mongodb": "MongoDB",
+		"sqlite": "SQLite",
+		"postgresql": "PostgreSQL",
+		"dbeaverDescription": "Universal database tool and SQL client",
+		"microsoftsqlserverDescription": "Enterprise relational database management system by Microsoft",
+		"mysqlDescription": "Relational database management system created by Oracle Corporation",
+		"mongodbDescription": "NoSQL document-oriented database program by MongoDB Inc.",
+		"sqliteDescription": "Relational database management system by D. Richard Hipp",
+		"postgresqlDescription": "Open-source relational database management system by PostgreSQL Global Development Group"
+	},
+	"es": {
+		"title": "Base de Datos",
+		"dbeaver": "DBeaver",
+		"microsoftsqlserver": "Microsoft SQL Server",
+		"mysql": "MySQL",
+		"mongodb": "MongoDB",
+		"sqlite": "SQLite",
+		"postgresql": "PostgreSQL",
+		"dbeaverDescription": "Herramienta de base de datos universal y cliente SQL",
+		"microsoftsqlserverDescription": "Sistema de gestión de base de datos relacional empresarial de Microsoft",
+		"mysqlDescription": "Sistema de gestión de base de datos relacional creado por Oracle Corporation",
+		"mongodbDescription": "Programa de base de datos orientado a documentos NoSQL de MongoDB Inc.",
+		"sqliteDescription": "Sistema de gestión de base de datos relacional de D. Richard Hipp",
+		"postgresqlDescription": "Sistema de gestión de base de datos relacional de código abierto de PostgreSQL Global Development Group"
+	}
+}

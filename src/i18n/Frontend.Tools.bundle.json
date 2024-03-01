@@ -1,0 +1,37 @@
+{
+	"$meta": {
+		"name": "Tools.Frontend",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"es": {
+		"title": "Frontend",
+		"html": "HTML",
+		"htmlDescription": "Hyper preprocesador de texto",
+		"pug": "Pug",
+		"pugDescription": "Motor de plantillas para Node.js y navegadores",
+		"css": "CSS",
+		"cssDescription": "Hojas de estilo en cascada",
+		"javascript": "JavaScript",
+		"javascriptDescription": "Lenguaje de programación interpretado de alto nivel",
+		"typescript": "TypeScript",
+		"typescriptDescription": "Lenguaje de código abierto que se basa en JavaScript",
+		"react": "React",
+		"reactDescription": "Biblioteca de JavaScript para construir interfaces de usuario"
+	},
+	"en": {
+		"title": "Frontend",
+		"html": "HTML",
+		"htmlDescription": "Hypertext Markup Language",
+		"pug": "Pug",
+		"pugDescription": "Template engine for Node.js and browser",
+		"css": "CSS",
+		"cssDescription": "Cascading Style Sheets",
+		"javascript": "JavaScript",
+		"javascriptDescription": "High-level, interpreted programming language",
+		"typescript": "TypeScript",
+		"typescriptDescription": "Open-source language which builds on JavaScript",
+		"react": "React",
+		"reactDescription": "JavaScript library for building user interfaces"
+	}
+}

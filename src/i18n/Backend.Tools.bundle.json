@@ -1,0 +1,39 @@
+{
+	"$meta": {
+		"name": "Tools.Backend",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"title": "Backend",
+		"nodejs": "Node.js",
+		"express": "Express",
+		"socketio": "Socket.io",
+		"pipedreamhq": "Pipedream HQ",
+		"csharp": "C#",
+		"python": "Python",
+
+		"nodejsDescription": "JavaScript runtime built on Chrome's V8 JavaScript engine",
+		"expressDescription": "Web application framework for Node.js",
+		"socketioDescription": "Library for real-time web applications",
+		"pipedreamhqDescription": "Integration platform for developers",
+		"csharpDescription": "General-purpose, multi-paradigm programming language",
+		"pythonDescription": "Interpreted, high-level, general-purpose programming language"
+	},
+	"es": {
+		"title": "Backend",
+		"nodejs": "Node.js",
+		"express": "Express",
+		"socketio": "Socket.io",
+		"pipedreamhq": "Pipedream HQ",
+		"csharp": "C#",
+		"python": "Python",
+
+		"nodejsDescription": "Tiempo de ejecución de JavaScript construido sobre el motor de JavaScript V8 de Chrome",
+		"expressDescription": "Marco de aplicación web para Node.js",
+		"socketioDescription": "Biblioteca para aplicaciones web en tiempo real",
+		"pipedreamhqDescription": "Plataforma de integración para desarrolladores",
+		"csharpDescription": "Lenguaje de programación de propósito general y multiparadigma",
+		"pythonDescription": "Lenguaje de programación de alto nivel, interpretado y de propósito general"
+	}
+}

@@ -29,5 +29,9 @@
     "dev:nocache": "parcel index.html --no-cache",
     "dev:lazy": "parcel index.html --lazy",
     "dev:cache": "parcel index.html"
-  }
+  },
+  "engines": {
+    "node": ">= 12"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
