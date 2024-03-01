@@ -1,3 +1,9 @@
+:root {
+	--color-primary: #161C30;
+	--color-secondary: #A63446;
+	--color-tertiary: #5DC1B9;
+}
+
 .noclass {
 	$noproperty: true;
 	color: inherit;

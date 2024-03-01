@@ -5,6 +5,7 @@ import { useMediaQuery, useWindowSize } from '@uidotdev/usehooks';
 import Container from 'react-bootstrap/Container';
 
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import Tools from './components/Tools';
 import Home from './components/Home';
 
@@ -41,6 +42,7 @@ function App() {
 				style={contentSize}>
 				<Home />
 				<Tools />
+				<Footer />
 			</Container>
 		</Container>
 	);

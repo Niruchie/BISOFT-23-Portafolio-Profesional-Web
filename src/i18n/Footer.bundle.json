@@ -1,0 +1,29 @@
+{
+	"$meta": {
+		"name": "Footer",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"contactTitle": "Enhance the software experience by contacting me now!",
+		"nameLabel": "Write your name",
+		"namePlaceholder": "Full name here",
+		"emailLabel": "Email address",
+		"emailPlaceholder": "e.g. colorful@business.com",
+		"messageLabel": "Which will be our the next project?",
+		"messagePlaceholder": "Your message or proposal",
+		"sendButton": "Send",
+		"footerText": "© {{year}} Anthony Yanan Padilla Ureña. All rights reserved."
+	},
+	"es": {
+		"contactTitle": "¡Mejora la experiencia de software contactándome ahora!",
+		"nameLabel": "Escribe tu nombre",
+		"namePlaceholder": "Nombre completo aquí",
+		"emailLabel": "Dirección de correo electrónico",
+		"emailPlaceholder": "p.ej. colorful@business.com",
+		"messageLabel": "¿Cuál será nuestro próximo proyecto?",
+		"messagePlaceholder": "Tu mensaje o propuesta",
+		"sendButton": "Enviar",
+		"footerText": "© {{year}} Anthony Yanan Padilla Ureña. Todos los derechos reservados."
+	}
+}
