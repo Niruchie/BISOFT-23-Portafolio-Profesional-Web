@@ -3,13 +3,13 @@ import { useMemo } from "react";
 import { initReactI18next, useTranslation } from "react-i18next";
 
 import Navigation from "./Navigation.bundle.json";
-
+import Home from "./Home.bundle.json";
+import Profile from "./Profile.bundle.json";
 import Tools from "./Tools.bundle.json";
 import ToolsFrontend from "./Frontend.Tools.bundle.json";
 import ToolsBackend from "./Backend.Tools.bundle.json";
 import ToolsDatabase from "./Database.Tools.bundle.json";
 import ToolsOther from "./Other.Tools.bundle.json";
-
 import Footer from "./Footer.bundle.json";
 
 i18n
@@ -23,13 +23,13 @@ i18n
 
 [
 	Navigation,
-
+	Home,
+	Profile,
 	Tools,
 	ToolsFrontend,
 	ToolsBackend,
 	ToolsDatabase,
 	ToolsOther,
-
 	Footer,
 ]
 	.forEach(bundle => {

@@ -1,0 +1,15 @@
+{
+	"$meta": {
+		"name": "Home",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"fullstack": "♔ Fullstack software developer",
+		"proposals": "Proposals become into colors"
+	},
+	"es": {
+		"fullstack": "♔ Desarrollador de software fullstack",
+		"proposals": "Las propuestas se convierten en colores"
+	}
+}

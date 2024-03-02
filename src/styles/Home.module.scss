@@ -1,1 +1,28 @@
 @import './defaults.module.scss';
+
+.display {
+	color: white;
+	overflow: hidden;
+	backface-visibility: hidden;
+	animation: background-gradient 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	animation-timing-function: ease-in;
+	background-image:
+		radial-gradient(circle at 80% 50%, transparent, var(--color-secondary)),
+		radial-gradient(circle at 20% 50%, transparent, var(--color-tertiary));
+}
+
+@keyframes background-gradient {
+	0% {
+		background-color: var(--color-primary);
+	}
+
+	50% {
+		background-color: var(--color-secondary);
+	}
+
+	100% {
+		background-color: var(--color-tertiary);
+	}
+}

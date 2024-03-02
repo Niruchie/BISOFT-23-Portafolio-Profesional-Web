@@ -1,0 +1,23 @@
+{
+	"$meta": {
+		"name": "Profile",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"title": "Profile",
+		"name": "Anthony Padilla",
+		"grade": "Fullstack software developer",
+		"gradeSub": "and network administrator...",
+		"experience": "Three years of experience",
+		"experienceDescription": "Developing applications for a multinational company, I am looking to grow my career to reach my goals. I am mainly a Node.Js and React developer, but I can work on more robust platforms such as C# or Python. I also have a focus on managing databases mostly from PosgresSQL, with collateral experience in MySQL and SQL Server"
+	},
+	"es": {
+		"title": "Perfil",
+		"name": "Anthony Padilla",
+		"grade": "Desarrollador de software Fullstack",
+		"gradeSub": "y administrador de redes...",
+		"experience": "Tres años de experiencia",
+		"experienceDescription": "Desarrollando aplicaciones para una empresa multinacional, estoy buscando hacer crecer mi carrera para alcanzar mis objetivos. Principalmente soy desarrollador de Node.Js y React, pero me puedo desenvolver durante el trabajo en plataformas más robustas como lo son C# o Python. También tengo enfoques en el manejo de bases de datos mayormente de PosgresSQL, con experiencia colateral en MySQL y SQL Server"
+	}
+}
