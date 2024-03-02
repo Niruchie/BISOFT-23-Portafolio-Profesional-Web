@@ -13,7 +13,7 @@
 		"messageLabel": "Which will be our the next project?",
 		"messagePlaceholder": "Your message or proposal",
 		"sendButton": "Send",
-		"footerText": "© {{year}} Anthony Yanan Padilla Ureña. All rights reserved."
+		"footerText": "LOVE GOOD TIME © {{year}} Anthony Yanan Padilla Ureña. All rights reserved."
 	},
 	"es": {
 		"contactTitle": "¡Mejora la experiencia de software contactándome ahora!",
@@ -24,6 +24,6 @@
 		"messageLabel": "¿Cuál será nuestro próximo proyecto?",
 		"messagePlaceholder": "Tu mensaje o propuesta",
 		"sendButton": "Enviar",
-		"footerText": "© {{year}} Anthony Yanan Padilla Ureña. Todos los derechos reservados."
+		"footerText": "LOVE GOOD TIME © {{year}} Anthony Yanan Padilla Ureña. Todos los derechos reservados."
 	}
 }

@@ -1,25 +1,29 @@
 import React from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from 'react-icons/io';
 
 import * as b from '../styles/Footer.module.scss';
-import { Trans, useTranslation } from 'react-i18next';
+import { useLanguage } from '../i18n/i18n.config';
 
 export default function Footer() {
-	const [t] = useTranslation("Footer");
+	const lang = useLanguage();
+	const { t } = useTranslation("Footer");
 
 	return (
 		<Container fluid as="footer" className={b["footer"].concat(" ", "bg-dark py-5")}>
 			<Form as={Container} className={b["contact"].concat(" ", "w-100 p-5")}>
 				<Row className="text-center mb-5">
-					<h2><Trans i18nKey="contactTitle" ns="Footer" /></h2>
+					<span className={b["mnc"].concat(" ", "h1")}>
+						<Trans i18nKey="contactTitle" ns="Footer" lang={lang} />
+					</span>
 				</Row>
 
 				<Row>
 					<Col sm={12} md={12} lg={6} className="my-4">
 						<Form.Group controlId="name">
 							<Form.Label>
-								<Trans i18nKey="nameLabel" ns="Footer" />
+								<Trans i18nKey="nameLabel" ns="Footer" lang={lang} />
 							</Form.Label>
 							<Form.Control
 								placeholder={t("namePlaceholder")}
@@ -32,7 +36,7 @@ export default function Footer() {
 					<Col sm={12} md={12} lg={6} className="my-4">
 						<Form.Group controlId="email">
 							<Form.Label>
-								<Trans i18nKey="emailLabel" ns="Footer" />
+								<Trans i18nKey="emailLabel" ns="Footer" lang={lang} />
 							</Form.Label>
 							<Form.Control
 								placeholder={t("emailPlaceholder")}
@@ -46,7 +50,7 @@ export default function Footer() {
 				<Row>
 					<Form.Group controlId="message" className="my-4">
 						<Form.Label>
-							<Trans i18nKey="messageLabel" ns="Footer" />
+							<Trans i18nKey="messageLabel" ns="Footer" lang={lang} />
 						</Form.Label>
 						<Form.Control
 							placeholder={t("messagePlaceholder")}
@@ -94,7 +98,9 @@ export default function Footer() {
 
 			<Row>
 				<Col className="text-center text-white">
-					<Trans ns="Footer"
+					<Trans
+						lang={lang}
+						ns="Footer" 
 						i18nKey="footerText"
 						values={{ year: new Date().getFullYear() }}
 					/>
