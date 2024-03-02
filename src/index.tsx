@@ -5,6 +5,7 @@ import { useMediaQuery, useWindowSize } from '@uidotdev/usehooks';
 import Container from 'react-bootstrap/Container';
 
 import Navigation from './components/Navigation';
+import Profile from './components/Profile';
 import Footer from './components/Footer';
 import Tools from './components/Tools';
 import Home from './components/Home';
@@ -26,18 +27,14 @@ function App() {
 	}, [isMediumDevice]);
 
 	return (
-		<Container fluid
-			className='m-0 p-0 g-0'
+		<Container fluid className='m-0 p-0 g-0'
 			style={{ height: '100vh', width: '100vw' }}>
 			<Navigation />
 			<div style={{ height: isMediumDevice ? '80px' : '55px' }} />
-			<Container fluid
-				className='w-100 h-100 p-0 g-0'
-				style={contentSize}>
-				<Home />
-				<Tools />
-				<Footer />
-			</Container>
+			<Home />
+			<Profile />
+			<Tools />
+			<Footer />
 		</Container>
 	);
 }

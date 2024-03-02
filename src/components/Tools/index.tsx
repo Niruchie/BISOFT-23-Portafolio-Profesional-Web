@@ -39,7 +39,7 @@ export default function Tools() {
 	}, [cards.length]);
 
 	return (
-		<Container fluid className="d-flex border flex-column justify-content-center align-items-center h-100 p-5">
+		<Container fluid className="p-5">
 			<Row className="h1 text-center">
 				<h1 className={font["mnc"]}>
 					<Trans i18nKey="title" ns="Tools" lang={lang} />
@@ -49,7 +49,7 @@ export default function Tools() {
 				<p><Trans i18nKey="description1" ns="Tools" lang={lang} /></p>
 				<p><Trans i18nKey="description2" ns="Tools" lang={lang} /></p>
 			</Row>
-			<Row className="d-flex justify-content-center align-items-stretch text-center w-100">
+			<Row className="d-flex justify-content-center">
 				{
 					isXXLDevice && cards.map((card, index) => (
 						<Col key={index} className='p-3'
