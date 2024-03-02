@@ -43,8 +43,14 @@ devDependencies:
   '@parcel/config-default':
     specifier: ^2.12.0
     version: 2.12.0(@parcel/core@2.12.0)(postcss@8.4.35)(typescript@5.3.3)
+  '@parcel/packager-raw-url':
+    specifier: 2.12.0
+    version: 2.12.0(@parcel/core@2.12.0)
   '@parcel/transformer-sass':
     specifier: ^2.12.0
+    version: 2.12.0(@parcel/core@2.12.0)
+  '@parcel/transformer-webmanifest':
+    specifier: 2.12.0
     version: 2.12.0(@parcel/core@2.12.0)
   '@types/node':
     specifier: ^20.11.24
@@ -779,6 +785,17 @@ packages:
       - '@swc/helpers'
     dev: true
 
+  /@parcel/packager-raw-url@2.12.0(@parcel/core@2.12.0):
+    resolution: {integrity: sha512-sH7cvLbotS+qknhQUCGfd9mslQr4KcanlZE5CgzM0uGn3SnyZoKznqHrbouzgnIP/LHgXKOKmMaNjPLtVe4rcA==}
+    engines: {node: '>= 12.0.0', parcel: ^2.12.0}
+    dependencies:
+      '@parcel/plugin': 2.12.0(@parcel/core@2.12.0)
+      '@parcel/utils': 2.12.0
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - '@swc/helpers'
+    dev: true
+
   /@parcel/packager-raw@2.12.0(@parcel/core@2.12.0):
     resolution: {integrity: sha512-tJZqFbHqP24aq1F+OojFbQIc09P/u8HAW5xfndCrFnXpW4wTgM3p03P0xfw3gnNq+TtxHJ8c3UFE5LnXNNKhYA==}
     engines: {node: '>= 12.0.0', parcel: ^2.12.0}
@@ -1126,6 +1143,19 @@ packages:
       posthtml-parser: 0.10.2
       posthtml-render: 3.0.0
       semver: 7.6.0
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - '@swc/helpers'
+    dev: true
+
+  /@parcel/transformer-webmanifest@2.12.0(@parcel/core@2.12.0):
+    resolution: {integrity: sha512-suiUv9DDEpyryHtzahbIeJSZTIeE/t4cdrU0Ikb/O46wsy5RLo59nE4E6TGWM84R7fQO8m/MhzeQM5Y3NV6jKg==}
+    engines: {parcel: ^2.12.0}
+    dependencies:
+      '@mischnic/json-sourcemap': 0.1.1
+      '@parcel/diagnostic': 2.12.0
+      '@parcel/plugin': 2.12.0(@parcel/core@2.12.0)
+      '@parcel/utils': 2.12.0
     transitivePeerDependencies:
       - '@parcel/core'
       - '@swc/helpers'
@@ -1626,7 +1656,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001591
-      electron-to-chromium: 1.4.689
+      electron-to-chromium: 1.4.690
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -1924,8 +1954,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /electron-to-chromium@1.4.689:
-    resolution: {integrity: sha512-GatzRKnGPS1go29ep25reM94xxd1Wj8ritU0yRhCJ/tr1Bg8gKnm6R9O/yPOhGQBoLMZ9ezfrpghNaTw97C/PQ==}
+  /electron-to-chromium@1.4.690:
+    resolution: {integrity: sha512-+2OAGjUx68xElQhydpcbqH50hE8Vs2K6TkAeLhICYfndb67CVH0UsZaijmRUE3rHlIxU1u0jxwhgVe6fK3YANA==}
     dev: true
 
   /emoji-regex@8.0.0:
