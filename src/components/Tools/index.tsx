@@ -44,7 +44,7 @@ export default function Tools() {
 		<Container fluid 
 			ref={refTools}
 			className='m-0 p-0 g-0'
-			style={{ height: '100vh' }}>
+			style={{ height: '135vh' }}>
 			<Container fluid className="p-5">
 				<Row className="h1 text-center">
 					<h1 className={font["mnc"]}>
