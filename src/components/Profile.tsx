@@ -12,7 +12,7 @@ export default function Profile() {
 	const { Profile: refProfile } = useNavigationContext();
 
 	return (
-		<Container fluid className='m-0 p-0 g-0' style={{ height: '100vh', width: '100vw' }}>
+		<Container fluid className='m-0 p-0 g-0' style={{ height: '100vh' }}>
 			<Container fluid ref={refProfile} className='py-5'>
 				<Row className="text-center  w-100 p-5">
 					<span className={b["mnc"].concat(" ", "h1")}>

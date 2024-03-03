@@ -14,7 +14,7 @@ export default function Home(){
 	const { Home: refHome } = useNavigationContext();
 
 	return (
-		<Container fluid className='m-0 p-0 g-0' style={{ height: '100vh', width: '100vw' }}>
+		<Container fluid className='m-0 p-0 g-0' style={{ height: '100vh' }}>
 			<Container fluid ref={refHome} className={b["display"].concat(" ", "d-flex flex-column justify-content-center align-items-center h-100 p-5")}>
 					<Row className="text-center p-5">
 						<img src={LGT} alt="=" width={256} height={256} />
