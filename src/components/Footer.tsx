@@ -3,15 +3,17 @@ import { Trans, useTranslation } from 'react-i18next';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from 'react-icons/io';
 
-import * as b from '../styles/Footer.module.scss';
+import { useNavigationContext } from './hooks/NavigationContext';
 import { useLanguage } from '../i18n/i18n.config';
+import * as b from '../styles/Footer.module.scss';
 
 export default function Footer() {
 	const lang = useLanguage();
 	const { t } = useTranslation("Footer");
+	const { Footer: refFooter } = useNavigationContext();
 
 	return (
-		<Container fluid as="footer" className={b["footer"].concat(" ", "bg-dark py-5")}>
+		<Container fluid ref={refFooter} as="footer" className={b["footer"].concat(" ", "bg-dark py-5")}>
 			<Form as={Container} className={b["contact"].concat(" ", "w-100 p-5")}>
 				<Row className="text-center mb-5">
 					<span className={b["mnc"].concat(" ", "h1")}>
@@ -100,7 +102,7 @@ export default function Footer() {
 				<Col className="text-center text-white">
 					<Trans
 						lang={lang}
-						ns="Footer" 
+						ns="Footer"
 						i18nKey="footerText"
 						values={{ year: new Date().getFullYear() }}
 					/>
