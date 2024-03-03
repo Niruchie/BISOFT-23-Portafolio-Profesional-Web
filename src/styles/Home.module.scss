@@ -26,3 +26,72 @@
 		background-color: var(--color-tertiary);
 	}
 }
+
+.sub {
+	color: rgb(100,220,220);
+	letter-spacing: 0.4em;
+}
+
+@mixin build { 
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.movement {
+	position: relative;
+	color: white;
+	font-size: 2em;
+	letter-spacing: .5em;
+	animation: move-skew 2s infinite linear alternate-reverse;
+	
+	&::before{
+		@include build;
+		left: 2px;
+		text-shadow: -2px 0 #ff00c1;
+		clip: rect(44px, 450px, 56px, 0);
+		animation: move-anim 5s infinite linear alternate-reverse;
+	}
+	
+	
+	&::after {
+		@include build;
+		left: -2px;
+		text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+		animation: move-anim2 1s infinite linear alternate-reverse;
+	}
+}
+
+@keyframes move-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*calc(1/$steps))} {
+      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+			transform: skew(calc(random(100) / 100) + deg);
+    }
+  }
+}
+
+
+@keyframes move-anim2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*calc(1/$steps))} {
+      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+			transform: skew(calc(random(100) / 100) + deg);
+    }
+  }
+}
+
+
+@keyframes move-skew {
+  $steps: 10;
+  @for $i from 0 through $steps {
+    #{percentage($i*calc(1/$steps))} {
+      transform: skew((random(10) - 5) + deg);
+    }
+  }
+}
