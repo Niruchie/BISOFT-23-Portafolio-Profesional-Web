@@ -13,9 +13,20 @@ import 'modern-normalize/modern-normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-nice-scroll/dist/styles.css";
 import './i18n/i18n.config';
+import { ParallaxImage } from 'react-nice-scroll';
 
-const image = new URL(
+const colors = new URL(
 	'./styles/resources/colors.png?width=2048',
+	import.meta.url,
+);
+
+const threehundreds = new URL(
+	'./styles/resources/threehundreds.png?width=2048',
+	import.meta.url,
+);
+
+const lighthand = new URL(
+	'./styles/resources/lighthand.png?width=2048',
 	import.meta.url,
 );
 
@@ -25,8 +36,17 @@ function App() {
 		<NavigationProvider>
 			<Navigation />
 			<Home />
+			<ParallaxImage
+				src={colors.href}
+				containerHeight='200px' />
 			<Profile />
+			<ParallaxImage
+				src={threehundreds.href}
+				containerHeight='200px' />
 			<Tools />
+			<ParallaxImage
+				src={lighthand.href}
+				containerHeight='200px' />
 			<Footer />
 		</NavigationProvider>
 	);
