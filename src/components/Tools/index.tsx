@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState, ReactElement } from 'react';
 import { useMediaQuery } from '@uidotdev/usehooks';
 import { Trans } from 'react-i18next';
 
@@ -20,7 +20,7 @@ import ToolsCardDCDev from './Other';
 
 import * as font from '../../styles/webfonts/fonts.module.scss';
 
-export default function Tools() {
+export default function Tools(): ReactElement {
 	const lang = useLanguage();
 	const { Tools: refTools } = useNavigationContext();
 	const isXXLDevice = useMediaQuery("only screen and (min-width : 1590px)");
@@ -58,22 +58,22 @@ export default function Tools() {
 				<Row className="d-flex justify-content-center">
 					{
 						isXXLDevice && cards.map((card, index) => (
-							<Col key={index} className='p-3'
-								children={
-									<Container as={card} cardClasses='shadow-lg rounded p-5' />
-								} />
+							<Col key={index} className='p-3'>
+								<Container as={card} cardClasses='shadow-lg rounded p-5' />
+							</Col>
 						))
 					}
 					{
 						!isXXLDevice && [
-							<Row sm={12} className=' d-flex justify-content-center align-items-stretch p-2'
-								children={<Container as={cards[current]} cardClasses='shadow-lg rounded p-5' />} />,
-							<div className='d-inline-flex justify-content-center align-items-center w-100 p-3'>
+							<Row key="0-noxxl" sm={12} className=' d-flex justify-content-center align-items-stretch p-2'>
+								<Container as={cards[current]} cardClasses='shadow-lg rounded p-5' />
+							</Row>,
+							<div key="1-noxxl" className='d-inline-flex justify-content-center align-items-center w-100 p-3'>
 								<FaRegArrowAltCircleLeft size={32} className='me-5'
 									onClick={() => handleSelect(false)} />
-								<span
-									children={cards.map((_, index) => (' ' + (index === current ? '●' : '○') + ' '))}
-								/>
+								<span>
+									{cards.map((_, index) => (' ' + (index === current ? '●' : '○') + ' '))}
+								</span>
 								<FaRegArrowAltCircleRight size={32} className='ms-5'
 									onClick={() => handleSelect(true)} />
 							</div>

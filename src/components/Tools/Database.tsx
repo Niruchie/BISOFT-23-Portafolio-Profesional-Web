@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { Trans } from 'react-i18next';
 import { Card, Accordion } from "react-bootstrap";
 import { SiMicrosoftsqlserver, SiMysql, SiMongodb, SiSqlite, SiPostgresql } from "react-icons/si";
@@ -5,7 +6,7 @@ import { SiMicrosoftsqlserver, SiMysql, SiMongodb, SiSqlite, SiPostgresql } from
 import { useLanguage } from "../../i18n/i18n.config";
 import DBeaver from '../../styles/resources/dbeaver.svg';
 
-export default function ToolsCardDatabase(props: { cardClasses?: string }) {
+export default function ToolsCardDatabase(props: { cardClasses?: string }): ReactElement {
 	const lang = useLanguage();
 	const { cardClasses } = props;
 

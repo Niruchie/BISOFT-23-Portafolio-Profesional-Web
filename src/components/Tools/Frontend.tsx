@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { Trans } from 'react-i18next';
 import { Card, Accordion } from "react-bootstrap";
 import { SiHtml5, SiPug, SiCss3, SiJavascript, SiTypescript, SiReact } from "react-icons/si";
@@ -5,7 +6,7 @@ import { SiHtml5, SiPug, SiCss3, SiJavascript, SiTypescript, SiReact } from "rea
 import { useLanguage } from "../../i18n/i18n.config";
 
 
-export default function ToolsCardFrontend(props: { cardClasses?: string }) {
+export default function ToolsCardFrontend(props: { cardClasses?: string }): ReactElement {
 	const lang = useLanguage();
 	const { cardClasses } = props;
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { Trans } from 'react-i18next';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
@@ -9,7 +9,7 @@ import LGT from '../styles/resources/logo.svg';
 import * as font from '../styles/webfonts/fonts.module.scss';
 import * as b from '../styles/Home.module.scss';
 
-export default function Home(){
+export default function Home(): ReactElement {
 	const lang = useLanguage();
 	const { Home: refHome } = useNavigationContext();
 

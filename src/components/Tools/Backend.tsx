@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { Trans } from 'react-i18next';
 import { Card, Accordion } from "react-bootstrap";
 import { SiNodedotjs, SiExpress, SiSocketdotio, SiCsharp, SiPython } from "react-icons/si";
@@ -5,9 +6,10 @@ import { SiNodedotjs, SiExpress, SiSocketdotio, SiCsharp, SiPython } from "react
 import { useLanguage } from "../../i18n/i18n.config";
 import PipedreamHQ from '../../styles/resources/pipedreamhq.svg';
 
-export default function ToolsCardBackend(props: { cardClasses?: string }) {
+export default function ToolsCardBackend(props: { cardClasses?: string }): ReactElement {
 	const lang = useLanguage();
 	const { cardClasses } = props;
+
 	return (
 		<Card className={cardClasses}>
 			<Card.Title className='h4'>

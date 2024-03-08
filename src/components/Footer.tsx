@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from 'react-icons/io';
@@ -7,7 +7,7 @@ import { useNavigationContext } from './hooks/NavigationContext';
 import { useLanguage } from '../i18n/i18n.config';
 import * as b from '../styles/Footer.module.scss';
 
-export default function Footer() {
+export default function Footer(): ReactElement {
 	const lang = useLanguage();
 	const { t } = useTranslation("Footer");
 	const { Footer: refFooter } = useNavigationContext();
@@ -66,33 +66,31 @@ export default function Footer() {
 
 				<Row>
 					<Col className="text-end">
-						<Button
-							variant="primary-outline"
-							children={t("sendButton")}
-							type="submit"
-						/>
+						<Button variant="primary-outline" type="submit">
+							<Trans i18nKey="sendButton" ns="Footer" lang={lang} />
+						</Button>
 					</Col>
 				</Row>
 			</Form>
 
 			<Row className="d-flex justify-content-center align-items-center text-center w-100">
 				<span className={b["contact-icon"]}>
-					<a href="https://github.com/Niruchie"
-						children={<IoLogoGithub size={32} />}
-						rel="noopener noreferrer"
-						target="_blank" />
+					<a target="_blank" rel="noopener noreferrer"
+						href="https://github.com/Niruchie">
+						<IoLogoGithub size={32} />
+					</a>
 				</span>
 				<span className={b["contact-icon"]}>
-					<a href="https://www.linkedin.com/in/anthonypadillau"
-						children={<IoLogoLinkedin size={32} />}
-						rel="noopener noreferrer"
-						target="_blank" />
+					<a target="_blank" rel="noopener noreferrer"
+						href="https://www.linkedin.com/in/anthonypadillau">
+						<IoLogoLinkedin size={32} />
+					</a>
 				</span>
 				<span className={b["contact-icon"]}>
-					<a href="https://wa.me/+50683130243"
-						children={<IoLogoWhatsapp size={32} />}
-						rel="noopener noreferrer"
-						target="_blank" />
+					<a target="_blank" rel="noopener noreferrer"
+						href="https://wa.me/+50683130243">
+						<IoLogoWhatsapp size={32} />
+					</a>
 				</span>
 			</Row>
 

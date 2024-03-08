@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useMemo, useState } from 'react';
+import { Fragment, useCallback, useMemo } from 'react';
 import { Trans, getI18n } from 'react-i18next';
 
 import Nav from 'react-bootstrap/Nav';
@@ -29,7 +29,7 @@ export default function Navigation() {
 	const redirectors = useNavigationContext()
 	const isMediumDevice = useMediaQuery("only screen and (min-width : 992px)");
 
-	
+
 	const contentSize = useMemo(() => {
 		if (isMediumDevice)
 			// ? Bootstrap 5: Navbar expand breakpoint
@@ -42,7 +42,7 @@ export default function Navigation() {
 	const setLanguage = useCallback(
 		(lang: string) => getI18n()
 			.changeLanguage(lang),
-		[lang],
+		[],
 	);
 
 	const sections = useCallback(() => [
@@ -53,7 +53,6 @@ export default function Navigation() {
 			finished: false,
 		},
 		{
-			
 			name: <Trans i18nKey="home" ns='Navigation' lang={lang} />,
 			icon: <IoHomeOutline size={32} />,
 			href: redirectors.Home,
@@ -89,7 +88,7 @@ export default function Navigation() {
 			href: redirectors.Footer,
 			finished: true,
 		},
-	], [lang]);
+	], [lang, redirectors.Footer, redirectors.Home, redirectors.Profile, redirectors.Tools]);
 
 	const options = useCallback(() => [
 		{ value: 'es', label: <Trans i18nKey="spanish" ns='Navigation' lang={lang} /> },
@@ -112,15 +111,15 @@ export default function Navigation() {
 										placement="bottom"
 										overlay={
 											isMediumDevice
-											? <Tooltip children={section.name}
-												className={b["noclass"]
-													.concat(
-														'',
-														' h3 ',
-													)
-												}
-											/>
-											: <Fragment />
+												? <Tooltip
+													className={b["noclass"]
+														.concat(
+															'',
+															' h3 ',
+														)
+													}
+												> {section.name} </Tooltip>
+												: <Fragment />
 										}
 									>
 										<Nav.Link
@@ -142,12 +141,14 @@ export default function Navigation() {
 										>
 											{
 												isMediumDevice && section.icon
-													|| (
-														<Fragment>
-															<span className="me-2" children={section.icon} />
-															{section.name}
-														</Fragment>
-													)
+												|| (
+													<Fragment>
+														<span className="me-2">
+															{section.icon}
+														</span>
+														{section.name}
+													</Fragment>
+												)
 											}
 										</Nav.Link>
 									</OverlayTrigger>
@@ -155,21 +156,21 @@ export default function Navigation() {
 						}
 					</Nav>
 					<Form className="d-flex">
-						<Form.Select onChange={(e) => setLanguage(e.target.value)} 
-							children={
+						<Form.Select onChange={(e) => setLanguage(e.target.value)}
+							aria-label="Language"
+							className="me-2">
+							{
 								options()
 									.map((option, index) => (
-										<option children={option.label}
-											value={option.value}
-											key={index}
-										/>
+										<option value={option.value} key={index}>
+											{option.label}
+										</option>
 									))
 							}
-							aria-label="Language"
-							className="me-2" />
+						</Form.Select>
 					</Form>
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
 	);
-};
+}
