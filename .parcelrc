@@ -5,5 +5,15 @@
       "parcel-transformer-ts-css-modules",
       "..."
     ]
+  },
+  "validators": {
+    "*.{ts,tsx}": [
+      "@parcel/validator-typescript",
+      "..."
+    ],
+    "*.{js,mjs,jsm,jsx,es6,cjs,ts,tsx}": [
+      "./settings/parcel-reporter-eslint.mjs",
+      "..."
+    ]
   }
 }
