@@ -4,14 +4,17 @@ import { ParallaxImage } from 'react-nice-scroll';
 
 import NavigationProvider from './components/hooks/NavigationContext';
 import Navigation from './components/Navigation';
+import Projects from './components/Projects';
 import Profile from './components/Profile';
 import Footer from './components/Footer';
 import Tools from './components/Tools';
 import Home from './components/Home';
 
 import 'modern-normalize/modern-normalize.css';
+import 'react-nice-scroll/dist/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "react-nice-scroll/dist/styles.css";
+import '@splidejs/react-splide/dist/css/splide.min.css';
+
 import './i18n/i18n.config';
 
 const colors = new URL(
@@ -45,6 +48,7 @@ function App(): ReactElement {
 			<ParallaxImage
 				src={lighthand.href}
 				containerHeight='200px' />
+			<Projects />
 			<Footer />
 		</NavigationProvider>
 	);

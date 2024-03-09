@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useMemo } from 'react';
+import { Fragment, useCallback, useMemo, useRef } from 'react';
 import { Trans, getI18n } from 'react-i18next';
 
 import Nav from 'react-bootstrap/Nav';
@@ -9,11 +9,10 @@ import Container from 'react-bootstrap/Container';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
 import { useMediaQuery } from '@uidotdev/usehooks';
-import { AiOutlineMessage } from "react-icons/ai";
-import { ImProfile } from "react-icons/im";
+import { AiOutlineMessage } from 'react-icons/ai';
+import { ImProfile } from 'react-icons/im';
 import {
 	IoHomeOutline,
-	IoSettingsOutline,
 	IoGitBranchOutline,
 	IoExtensionPuzzleOutline,
 	IoCodeOutline,
@@ -26,8 +25,9 @@ import * as b from '../styles/Navigation.module.scss';
 
 export default function Navigation() {
 	const lang = useLanguage();
+	const close = useRef<HTMLButtonElement>(null);
 	const redirectors = useNavigationContext()
-	const isMediumDevice = useMediaQuery("only screen and (min-width : 992px)");
+	const isMediumDevice = useMediaQuery('only screen and (min-width : 992px)');
 
 
 	const contentSize = useMemo(() => {
@@ -46,73 +46,71 @@ export default function Navigation() {
 	);
 
 	const sections = useCallback(() => [
+		// {
+		// 	name: <Trans i18nKey='settings' ns='Navigation' lang={lang} />,
+		// 	icon: <IoSettingsOutline size={32} />,
+		// 	href: '#settings',
+		// 	finished: false,
+		// },
 		{
-			name: <Trans i18nKey="settings" ns='Navigation' lang={lang} />,
-			icon: <IoSettingsOutline size={32} />,
-			href: '#settings',
-			finished: false,
-		},
-		{
-			name: <Trans i18nKey="home" ns='Navigation' lang={lang} />,
+			name: <Trans i18nKey='home' ns='Navigation' lang={lang} />,
 			icon: <IoHomeOutline size={32} />,
 			href: redirectors.Home,
 			finished: true,
 		},
 		{
-			name: <Trans i18nKey="profile" ns='Navigation' lang={lang} />,
+			name: <Trans i18nKey='profile' ns='Navigation' lang={lang} />,
 			icon: <ImProfile size={32} />,
 			href: redirectors.Profile,
 			finished: true,
 		},
 		{
-			name: <Trans i18nKey="studies" ns='Navigation' lang={lang} />,
+			name: <Trans i18nKey='studies' ns='Navigation' lang={lang} />,
 			icon: <IoGitBranchOutline size={32} />,
 			href: '#studies',
 			finished: false,
 		},
 		{
-			name: <Trans i18nKey="tools" ns='Navigation' lang={lang} />,
+			name: <Trans i18nKey='tools' ns='Navigation' lang={lang} />,
 			icon: <IoExtensionPuzzleOutline size={32} />,
 			href: redirectors.Tools,
 			finished: true,
 		},
 		{
-			name: <Trans i18nKey="projects" ns='Navigation' lang={lang} />,
+			name: <Trans i18nKey='projects' ns='Navigation' lang={lang} />,
 			icon: <IoCodeOutline size={32} />,
-			href: '#projects',
-			finished: false,
+			href: redirectors.Projects,
+			finished: true,
 		},
 		{
-			name: <Trans i18nKey="contact" ns='Navigation' lang={lang} />,
+			name: <Trans i18nKey='contact' ns='Navigation' lang={lang} />,
 			icon: <AiOutlineMessage size={32} />,
 			href: redirectors.Footer,
 			finished: true,
 		},
-	], [lang, redirectors.Footer, redirectors.Home, redirectors.Profile, redirectors.Tools]);
+	], [lang, redirectors.Footer, redirectors.Home, redirectors.Profile, redirectors.Projects, redirectors.Tools]);
 
 	const options = useCallback(() => [
-		{ value: 'es', label: <Trans i18nKey="spanish" ns='Navigation' lang={lang} /> },
-		{ value: 'en', label: <Trans i18nKey="english" ns='Navigation' lang={lang} /> },
+		{ value: 'es', label: <Trans i18nKey='spanish' ns='Navigation' lang={lang} /> },
+		{ value: 'en', label: <Trans i18nKey='english' ns='Navigation' lang={lang} /> },
 	], [lang]);
 
 	return (
-		<Navbar collapseOnSelect sticky='top'
-			variant="dark" expand="lg"
-			className={b['nav-bar']}>
+		<Navbar collapseOnSelect ref={redirectors.Navigation.ref} fixed='top' variant='dark' expand='lg' className={b['nav-bar']}>
 			<Container fluid>
-				<Navbar.Toggle aria-controls="r-nav" />
-				<Navbar.Collapse id="r-nav">
-					<Nav className="me-auto">
+				<Navbar.Toggle aria-controls='r-nav' ref={close} />
+				<Navbar.Collapse id='r-nav'>
+					<Nav className='me-auto'>
 						{
 							sections()
 								.map((section, index) => (
 									<OverlayTrigger
 										key={index}
-										placement="bottom"
+										placement='bottom'
 										overlay={
 											isMediumDevice
 												? <Tooltip
-													className={b["noclass"]
+													className={b['noclass']
 														.concat(
 															'',
 															' h3 ',
@@ -125,17 +123,27 @@ export default function Navigation() {
 										<Nav.Link
 											data-active={index === 0}
 											onClick={() => {
+												if (!isMediumDevice)
+													if (close.current)
+														close.current.click();
+
 												if (typeof section.href !== 'string') {
-													if (section.href.current) {
+													if (section.href.current === redirectors.Home.current) {
+														window.scrollTo({
+															behavior: 'smooth',
+															top: 0,
+														});
+													}
+													else if (section.href.current) {
 														window.scrollTo({
 															top: section.href.current.offsetTop - contentSize,
-															behavior: 'smooth'
+															behavior: 'smooth',
 														});
 													}
 												}
 											}}
 											className={b['nav-item'].concat(
-												" ",
+												' ',
 												'p-3 d-flex justify-md-content-center align-items-center'
 											)}
 										>
@@ -143,7 +151,7 @@ export default function Navigation() {
 												isMediumDevice && section.icon
 												|| (
 													<Fragment>
-														<span className="me-2">
+														<span className='me-2'>
 															{section.icon}
 														</span>
 														{section.name}
@@ -155,10 +163,10 @@ export default function Navigation() {
 								))
 						}
 					</Nav>
-					<Form className="d-flex">
+					<Form className='d-flex'>
 						<Form.Select onChange={(e) => setLanguage(e.target.value)}
-							aria-label="Language"
-							className="me-2">
+							aria-label='Language'
+							className='me-2'>
 							{
 								options()
 									.map((option, index) => (
