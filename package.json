@@ -29,10 +29,11 @@
     "typings-for-css-modules-loader": "^1.7.0"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
     "@uidotdev/usehooks": "^2.4.1",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.0.8",
-    "i18next": "^23.10.0",
+    "i18next": "^23.10.1",
     "modern-normalize": "^2.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
@@ -41,16 +42,15 @@
     "react-icons": "^5.0.1",
     "react-nice-scroll": "^1.0.0",
     "sass": "^1.71.1",
-    "swiper": "^11.0.7",
     "typescript-eslint": "^7.1.1"
   },
   "scripts": {
-    "dev:nocache": "parcel index.html --no-cache",
-    "dev:lazy": "parcel index.html --lazy",
-    "dev:build": "parcel build index.html",
-    "dev:cache": "parcel index.html",
     "prod:build": "parcel build index.html --public-url /BISOFT-23-Portafolio-Profesional-Web --dist-dir dist",
-    "prod:deploy": "gh-pages -d dist -m \"other(Deploy): Manual deploy to Github Pages\""
+    "prod:deploy": "gh-pages -d dist -m \"other(Deploy): Manual deploy to Github Pages\"",
+    "dev:nocache": "parcel index.html --no-cache --host 0.0.0.0",
+    "dev:lazy": "parcel index.html --lazy --host 0.0.0.0",
+    "dev:build": "parcel build index.html --host 0.0.0.0",
+    "dev:cache": "parcel index.html --host 0.0.0.0"
   },
   "engines": {
     "node": ">= 12"

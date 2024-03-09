@@ -18,5 +18,6 @@
 		"**/target": true,
 		"**/out": true,
 		"**/.vscode": true
-	}
+	},
+	"explorer.excludeGitIgnore": true
 }

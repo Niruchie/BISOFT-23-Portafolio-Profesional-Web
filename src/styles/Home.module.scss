@@ -28,8 +28,7 @@
 }
 
 .sub {
-	color: rgb(100,220,220);
-	letter-spacing: 0.4em;
+	
 }
 
 @mixin build { 
@@ -44,7 +43,7 @@
 .movement {
 	position: relative;
 	color: white;
-	font-size: 2em;
+	font-size: 1.7em;
 	letter-spacing: .5em;
 	animation: move-skew 2s infinite linear alternate-reverse;
 	

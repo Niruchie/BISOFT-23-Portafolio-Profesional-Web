@@ -1,0 +1,27 @@
+{
+	"$meta": {
+		"name": "Projects.Dynamic",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"react": "React.js",
+		"typescript": "TypeScript",
+		"nodejs": "Node.js",
+		"express": "Express.js",
+		"mysql": "MySQL",
+		"postgresql": "PostgreSQL",
+		"application": "Dynamic Application",
+		"description": "Viewer and system layer that allows the handling and modification of data structures within several sources of information, allows to establish relationships between them and visualize their interactions at low level from a high-level friendly environment, developed for enterprise use."
+	},
+	"es": {
+		"react": "React.js",
+		"typescript": "TypeScript",
+		"nodejs": "Node.js",
+		"express": "Express.js",
+		"mysql": "MySQL",
+		"postgresql": "PostgreSQL",
+		"application": "Aplicación Dinámica",
+		"description": "Visualizador y capa de sistema que permite el manejo y modificación de estructuras de datos dentro de varias fuentes de información, permite establecer relaciones entre ellos y visualizar sus interacciones en bajo nivel desde un entorno amigable de alto nivel, desarrollada para uso empresarial."
+	}
+}

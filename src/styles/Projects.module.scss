@@ -1,0 +1,15 @@
+@import './defaults.module.scss';
+@import './webfonts/fonts.module.scss';
+
+.badge {
+	background-color: var(--color-tertiary) !important;
+}
+
+.border {
+	border: solid 3px var(--color-tertiary) !important;
+}
+
+.separator {
+	color: var(--color-tertiary) !important;
+}
+

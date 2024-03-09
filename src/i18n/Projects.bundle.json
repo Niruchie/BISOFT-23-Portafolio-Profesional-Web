@@ -1,0 +1,13 @@
+{
+	"$meta": {
+		"name": "Projects",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"title": "Projects"
+	},
+	"es": {
+		"title": "Proyectos"
+	}
+}

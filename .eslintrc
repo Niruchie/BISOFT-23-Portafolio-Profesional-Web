@@ -32,5 +32,9 @@
         "node_modules",
         "build",
         "dist"
-    ]
+    ],
+    "rules": {
+        "quotes": [2, "single", { "avoidEscape": true }],
+        "jsx-quotes": [2, "prefer-single"]
+    }
 }
