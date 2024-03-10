@@ -102,7 +102,7 @@ export default function PowerAppsProject(): ReactElement {
 				<Col className='p-2' lg='6'>
 					{isLargerDevice && images}
 					<hr />
-					<div className='d-flex flex-row justify-content-start align-items-center'>
+					<div className='d-flex flex-row justify-content-start align-items-center flex-wrap'>
 						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
 							<SiJson className='me-2' />
 							<Trans i18nKey='json' ns='Projects.PowerApps' lang={lang} />

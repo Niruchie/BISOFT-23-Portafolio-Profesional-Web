@@ -7,10 +7,16 @@ import { useWindowSize } from '@uidotdev/usehooks';
 
 import { useNavigationContext } from './hooks/NavigationContext';
 import { useLanguage } from '../i18n/i18n.config';
+import ParallaxCard from './ParallaxCard';
 
 import LGT from '../styles/resources/logo.svg';
 import * as font from '../styles/webfonts/fonts.module.scss';
 import * as b from '../styles/Home.module.scss';
+
+const colors = new URL(
+	'../styles/resources/colors.png?width=2048',
+	import.meta.url,
+);
 
 export default function Home(): ReactElement {
 	const lang = useLanguage();
@@ -18,7 +24,7 @@ export default function Home(): ReactElement {
 	const { Home: refHome } = useNavigationContext();
 
 	return (
-		<Container fluid className='m-0 p-0 g-0' style={{ height }}>
+		<ParallaxCard height={height} backgroundImage={colors.href} extraBgCss={[]}> 
 			<Container fluid ref={refHome} className={['d-flex', 'flex-column', 'justify-content-center', 'align-items-center', 'h-100', 'p-5', b['display']].join(' ')}>
 				<Row className='d-flex flex-column justify-content-center align-items-center'>
 					<Col className='d-flex justify-content-center align-items-center'>
@@ -41,6 +47,6 @@ export default function Home(): ReactElement {
 					</Col>
 				</Row>
 			</Container>
-		</Container>
+		</ParallaxCard>
 	);
 }

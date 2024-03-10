@@ -102,28 +102,28 @@ export default function DynamicProject(): ReactElement {
 				<Col className='p-2' lg='6'>
 					{isLargerDevice && images}
 					<hr />
-					<div className='d-flex flex-row justify-content-start align-items-center'>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+					<div className='d-flex flex-row justify-content-start align-items-center flex-wrap'>
+						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<IoLogoReact className='me-2' />
 							<Trans i18nKey='react' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<SiTypescript className='me-2' />
 							<Trans i18nKey='typescript' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<IoLogoNodejs className='me-2' />
 							<Trans i18nKey='nodejs' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<SiExpress className='me-2' />
 							<Trans i18nKey='express' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<SiMysql className='me-2' />
 							<Trans i18nKey='mysql' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<SiPostgresql className='me-2' />
 							<Trans i18nKey='postgresql' ns='Projects.Dynamic' lang={lang} />
 						</div>

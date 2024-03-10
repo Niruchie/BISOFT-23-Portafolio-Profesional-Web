@@ -12,7 +12,13 @@
 		"emailPlaceholder": "e.g. colorful@business.com",
 		"messageLabel": "Which will be our the next project?",
 		"messagePlaceholder": "Your message or proposal",
-		"sendButton": "Send",
+		"sendButton": "Send proposal",
+		"nameError": "Please enter your name",
+		"emailError": "Please enter a valid email address",
+		"messageError": "Please enter a message or proposal",
+		"formSubmitError": "An error occurred while sending the message. Please try again later.",
+		"formSubmitSuccess": "Sent successfully. I will contact you soon.",
+
 		"footerText": "LOVE GOOD TIME © {{year}} Anthony Yanan Padilla Ureña. All rights reserved."
 	},
 	"es": {
@@ -23,7 +29,12 @@
 		"emailPlaceholder": "p.ej. colorful@business.com",
 		"messageLabel": "¿Cuál será nuestro próximo proyecto?",
 		"messagePlaceholder": "Tu mensaje o propuesta",
-		"sendButton": "Enviar",
+		"sendButton": "Enviar propuesta",
+		"nameError": "Por favor, ingresa tu nombre",
+		"emailError": "Por favor, ingresa una dirección de correo electrónico válida",
+		"messageError": "Por favor, ingresa un mensaje o propuesta",
+		"formSubmitError": "Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.",
+		"formSubmitSuccess": "Enviado con éxito. Me pondré en contacto contigo pronto.",
 		"footerText": "LOVE GOOD TIME © {{year}} Anthony Yanan Padilla Ureña. Todos los derechos reservados."
 	}
 }

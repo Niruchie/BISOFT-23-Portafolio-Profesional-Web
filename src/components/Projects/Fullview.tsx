@@ -45,13 +45,13 @@ export default function Fullview({ images, unshow, slide }: Properties) {
 		const splide = document
 			.createElement('div');
 
-		splide.style.position = 'fixed';
-		splide.style.bottom = '0';
 		splide.style.left = '0';
-		splide.style.width = '100%';
-		splide.style.height = '100%';
-		splide.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+		splide.style.bottom = '0';
+		splide.style.width = '100vw';
+		splide.style.height = '100vh';
 		splide.style.zIndex = '50000';
+		splide.style.position = 'fixed';
+		splide.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
 
 		document.body
 			.appendChild(splide);

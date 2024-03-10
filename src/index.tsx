@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client';
 import { ReactElement, StrictMode } from 'react';
-import { ParallaxImage } from 'react-nice-scroll';
 
 import NavigationProvider from './components/hooks/NavigationContext';
+import ParallaxCard from './components/ParallaxCard';
 import Navigation from './components/Navigation';
 import Projects from './components/Projects';
 import Profile from './components/Profile';
@@ -11,7 +11,6 @@ import Tools from './components/Tools';
 import Home from './components/Home';
 
 import 'modern-normalize/modern-normalize.css';
-import 'react-nice-scroll/dist/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@splidejs/react-splide/dist/css/splide.min.css';
 
@@ -32,25 +31,29 @@ const lighthand = new URL(
 	import.meta.url,
 );
 
+const abstractshapes = new URL(
+	'./styles/resources/abstractshapes.webp?width=2048',
+	import.meta.url,
+);
+
 function App(): ReactElement {
 	return (
-		<NavigationProvider>
-			<Navigation />
-			<Home />
-			<ParallaxImage
-				src={colors.href}
-				containerHeight='200px' />
-			<Profile />
-			<ParallaxImage
-				src={threehundreds.href}
-				containerHeight='200px' />
-			<Tools />
-			<ParallaxImage
-				src={lighthand.href}
-				containerHeight='200px' />
-			<Projects />
-			<Footer />
-		</NavigationProvider>
+			<NavigationProvider>
+				<Navigation />
+				<Home />
+				<ParallaxCard
+					backgroundImage={colors.href} />
+				<Profile />
+				<ParallaxCard
+					backgroundImage={threehundreds.href} />
+				<Tools />
+				<ParallaxCard
+					backgroundImage={lighthand.href} />
+				<Projects />
+				<ParallaxCard
+					backgroundImage={abstractshapes.href} />
+				<Footer />
+			</NavigationProvider>
 	);
 }
 
