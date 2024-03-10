@@ -40,7 +40,7 @@ export default function Home(): ReactElement {
 						</Row>
 
 						<Row>
-							<span className={b['sub']}>
+							<span>
 								<Trans i18nKey='proposals' ns='Home' lang={lang} />
 							</span>
 						</Row>
