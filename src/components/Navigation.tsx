@@ -1,4 +1,5 @@
-import { Fragment, useCallback, useMemo, useRef } from 'react';
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useMediaQuery } from '@uidotdev/usehooks';
 import { Trans, getI18n } from 'react-i18next';
 
 import Nav from 'react-bootstrap/Nav';
@@ -8,7 +9,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import Container from 'react-bootstrap/Container';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
-import { useMediaQuery } from '@uidotdev/usehooks';
+import { FaRegArrowAltCircleUp } from 'react-icons/fa';
 import { AiOutlineMessage } from 'react-icons/ai';
 import { ImProfile } from 'react-icons/im';
 import {
@@ -22,13 +23,15 @@ import {
 import { useNavigationContext } from './hooks/NavigationContext';
 import { useLanguage } from '../i18n/i18n.config';
 import * as b from '../styles/Navigation.module.scss';
+import { createPortal } from 'react-dom';
 
 export default function Navigation() {
 	const lang = useLanguage();
-	const close = useRef<HTMLButtonElement>(null);
 	const redirectors = useNavigationContext()
 	const isMediumDevice = useMediaQuery('only screen and (min-width : 992px)');
-
+	
+	const [scroller, setScroller] = useState<HTMLDivElement | null>(null);
+	const close = useRef<HTMLButtonElement>(null);
 
 	const contentSize = useMemo(() => {
 		if (isMediumDevice)
@@ -94,6 +97,37 @@ export default function Navigation() {
 		{ value: 'es', label: <Trans i18nKey='spanish' ns='Navigation' lang={lang} /> },
 		{ value: 'en', label: <Trans i18nKey='english' ns='Navigation' lang={lang} /> },
 	], [lang]);
+
+	const scrollTop = useMemo(() => (
+		<div className={b['scroller']}>
+			<FaRegArrowAltCircleUp size={40} className='text-white'
+				onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+		</div>
+	), []);
+
+	useEffect(() => {
+		const toaster = document
+			.createElement('div');
+
+		toaster.style.left = '0';
+		toaster.style.bottom = '0';
+		toaster.style.width = '100vw';
+		toaster.style.height = '100vh';
+		toaster.style.zIndex = '50000';
+		toaster.style.position = 'fixed';
+		toaster.style.pointerEvents = 'none';
+		toaster.style.backgroundColor = 'transparent';
+
+		document.body
+			.appendChild(toaster);
+
+		setScroller(toaster);
+
+		return () => {
+			document.body
+				.removeChild(toaster);
+		};
+	}, []);
 
 	return (
 		<Navbar collapseOnSelect ref={redirectors.Navigation.ref} fixed='top' variant='dark' expand='lg' className={b['nav-bar']}>
@@ -179,6 +213,7 @@ export default function Navigation() {
 					</Form>
 				</Navbar.Collapse>
 			</Container>
+			{scroller && createPortal(scrollTop, scroller)}
 		</Navbar>
 	);
 }
