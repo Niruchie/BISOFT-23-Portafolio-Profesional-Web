@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import { Trans } from 'react-i18next';
+import { useWindowSize } from '@uidotdev/usehooks';
 import { Container, Row, Col } from 'react-bootstrap';
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from 'react-icons/io';
 
@@ -11,10 +12,11 @@ import * as b from '../styles/Footer.module.scss';
 
 export default function Footer(): ReactElement {
 	const lang = useLanguage();
+	const { height } = useWindowSize();
 	const { Footer: refFooter } = useNavigationContext();
 
 	return (
-		<Container fluid ref={refFooter} as='footer' className={b['footer'].concat(' ', 'bg-dark py-5')}>
+		<Container fluid ref={refFooter} as='footer' className={[b['footer'], 'd-flex', 'flex-column', 'justify-content-between', 'bg-dark', 'py-5'].join(' ')} style={{ minHeight: height }}>
 			<Row className='text-center m'>
 				<span className={b['mnc'].concat(' ', 'h1')}>
 					<Trans i18nKey='contactTitle' ns='Footer' lang={lang} />
@@ -27,19 +29,19 @@ export default function Footer(): ReactElement {
 				<span className={b['contact-icon']}>
 					<a target='_blank' rel='noopener noreferrer'
 						href='https://github.com/Niruchie'>
-						<IoLogoGithub size={32} />
+						<IoLogoGithub size={40} />
 					</a>
 				</span>
 				<span className={b['contact-icon']}>
 					<a target='_blank' rel='noopener noreferrer'
 						href='https://www.linkedin.com/in/anthonypadillau'>
-						<IoLogoLinkedin size={32} />
+						<IoLogoLinkedin size={40} />
 					</a>
 				</span>
 				<span className={b['contact-icon']}>
 					<a target='_blank' rel='noopener noreferrer'
 						href='https://wa.me/+50683130243'>
-						<IoLogoWhatsapp size={32} />
+						<IoLogoWhatsapp size={40} />
 					</a>
 				</span>
 			</Row>

@@ -1,5 +1,5 @@
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useMediaQuery } from '@uidotdev/usehooks';
+import { useMediaQuery, useWindowScroll } from '@uidotdev/usehooks';
 import { Trans, getI18n } from 'react-i18next';
 
 import Nav from 'react-bootstrap/Nav';
@@ -14,7 +14,7 @@ import { AiOutlineMessage } from 'react-icons/ai';
 import { ImProfile } from 'react-icons/im';
 import {
 	IoHomeOutline,
-	IoGitBranchOutline,
+	// IoGitBranchOutline,
 	IoExtensionPuzzleOutline,
 	IoCodeOutline,
 } from 'react-icons/io5';
@@ -27,8 +27,11 @@ import { createPortal } from 'react-dom';
 
 export default function Navigation() {
 	const lang = useLanguage();
-	const redirectors = useNavigationContext()
+	const [{ x, y }] = useWindowScroll();
+	const redirectors = useNavigationContext();
 	const isMediumDevice = useMediaQuery('only screen and (min-width : 992px)');
+
+	console.log('Window:', x, y);
 	
 	const [scroller, setScroller] = useState<HTMLDivElement | null>(null);
 	const close = useRef<HTMLButtonElement>(null);
@@ -52,7 +55,7 @@ export default function Navigation() {
 		// {
 		// 	name: <Trans i18nKey='settings' ns='Navigation' lang={lang} />,
 		// 	icon: <IoSettingsOutline size={32} />,
-		// 	href: '#settings',
+		// 	href: null,
 		// 	finished: false,
 		// },
 		{
@@ -67,12 +70,12 @@ export default function Navigation() {
 			href: redirectors.Profile,
 			finished: true,
 		},
-		{
-			name: <Trans i18nKey='studies' ns='Navigation' lang={lang} />,
-			icon: <IoGitBranchOutline size={32} />,
-			href: '#studies',
-			finished: false,
-		},
+		// {
+		// 	name: <Trans i18nKey='studies' ns='Navigation' lang={lang} />,
+		// 	icon: <IoGitBranchOutline size={32} />,
+		// 	href: null,
+		// 	finished: false,
+		// },
 		{
 			name: <Trans i18nKey='tools' ns='Navigation' lang={lang} />,
 			icon: <IoExtensionPuzzleOutline size={32} />,
@@ -155,14 +158,14 @@ export default function Navigation() {
 										}
 									>
 										<Nav.Link
-											data-active={index === 0}
+											data-active={section?.href?.current?.offsetTop < (1 + y + contentSize)}
 											onClick={() => {
 												if (!isMediumDevice)
 													if (close.current)
 														close.current.click();
 
-												if (typeof section.href !== 'string') {
-													if (section.href.current === redirectors.Home.current) {
+												if (section.href) {
+													if (section.href?.current === redirectors.Home.current) {
 														window.scrollTo({
 															behavior: 'smooth',
 															top: 0,
@@ -213,7 +216,9 @@ export default function Navigation() {
 					</Form>
 				</Navbar.Collapse>
 			</Container>
-			{scroller && createPortal(scrollTop, scroller)}
+			{scroller 
+				&& (1 + y + contentSize) > redirectors.Home.current?.offsetHeight
+				&& createPortal(scrollTop, scroller)}
 		</Navbar>
 	);
 }

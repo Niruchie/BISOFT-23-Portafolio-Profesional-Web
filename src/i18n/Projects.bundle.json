@@ -5,9 +5,11 @@
 		"engine": "i18n"
 	},
 	"en": {
-		"title": "Projects"
+		"title": "Projects",
+		"clickToClose": "Click here to close"
 	},
 	"es": {
-		"title": "Proyectos"
+		"title": "Proyectos",
+		"clickToClose": "Haga clic aquí para cerrar"
 	}
 }

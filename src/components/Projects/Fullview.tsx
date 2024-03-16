@@ -1,8 +1,11 @@
+import { Trans } from 'react-i18next';
 import { createPortal } from 'react-dom';
 import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { IoCloseCircleOutline } from 'react-icons/io5';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import { useLanguage } from '../../i18n/i18n.config';
 
 interface Properties {
 	slide: number;
@@ -11,6 +14,7 @@ interface Properties {
 }
 
 export default function Fullview({ images, unshow, slide }: Properties) {
+	const lang = useLanguage();
 	const [splide, setSplide] = useState<HTMLDivElement | null>(null);
 	const options = {
 		start: slide,
@@ -36,7 +40,9 @@ export default function Fullview({ images, unshow, slide }: Properties) {
 			</div>
 			<div className='d-flex justify-content-center align-items-center text-white p-5' style={{ userSelect: 'none' }} onClick={unshow}>
 				<IoCloseCircleOutline className='me-2'/>
-				<span>Click here to close</span>
+				<span>
+					<Trans i18nKey='clickToClose' ns='Projects' lang={lang} />
+				</span>
 			</div>
 		</Container>
 	);
