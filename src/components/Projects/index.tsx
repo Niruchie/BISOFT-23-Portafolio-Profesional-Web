@@ -12,6 +12,7 @@ import PowerAppsProject from './PowerApps';
 import DynamicProject from './Dynamic';
 
 import * as font from '../../styles/webfonts/fonts.module.scss';
+import VortexProject from './Vortex';
 
 export default function Projects(): ReactElement {
 	const lang = useLanguage();
@@ -31,12 +32,21 @@ export default function Projects(): ReactElement {
 					<Trans i18nKey='title' ns='Projects' lang={lang} />
 				</span>
 			</Row>
+
+			<div className='text-center'>
+				<p className='p-0 m-0 g-0'><Trans i18nKey='description1' ns='Projects' lang={lang} /></p>
+				<p className='px-5 m-0 g-0'><Trans i18nKey='description2' ns='Projects' lang={lang} /></p>
+			</div>
+
 			<Splide options={options}>
 				<SplideSlide className='p-5'>
 					<DynamicProject />
 				</SplideSlide>
 				<SplideSlide className='p-5'>
 					<PowerAppsProject />
+				</SplideSlide>
+				<SplideSlide className='p-5'>
+					<VortexProject />
 				</SplideSlide>
 			</Splide>
 		</Container>

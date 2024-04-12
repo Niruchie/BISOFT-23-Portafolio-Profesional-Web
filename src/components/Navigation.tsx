@@ -27,11 +27,9 @@ import { createPortal } from 'react-dom';
 
 export default function Navigation() {
 	const lang = useLanguage();
-	const [{ x, y }] = useWindowScroll();
+	const [{ y }] = useWindowScroll();
 	const redirectors = useNavigationContext();
 	const isMediumDevice = useMediaQuery('only screen and (min-width : 992px)');
-
-	console.log('Window:', x, y);
 	
 	const [scroller, setScroller] = useState<HTMLDivElement | null>(null);
 	const close = useRef<HTMLButtonElement>(null);

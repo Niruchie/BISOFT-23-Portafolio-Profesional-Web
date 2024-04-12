@@ -59,26 +59,31 @@ export default function DynamicProject(): ReactElement {
 		<Row key='dynamic' className={isLargerDevice ? 'mb-3' : 'mt-3'}>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={Dynamic2.href} width='100%'
 					onClick={() => open(1)} />
 			</Col>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={Dynamic3.href} width='100%'
 					onClick={() => open(2)} />
 			</Col>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={Dynamic4.href} width='100%'
 					onClick={() => open(3)} />
 			</Col>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={Dynamic5.href} width='100%'
 					onClick={() => open(4)} />
 			</Col>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={Dynamic6.href} width='100%'
 					onClick={() => open(5)} />
 			</Col>
@@ -94,7 +99,7 @@ export default function DynamicProject(): ReactElement {
 			</Row>
 			<Row>
 				<Col className='p-2' lg='6'>
-					<img className={['rounded', b['border']].join(' ')}
+					<img className={['rounded', b['border']].join(' ')} data-aos='zoom-in-down'
 						src={Dynamic1.href} width='100%' onClick={() => open(0)} />
 
 					{!isLargerDevice && images}
@@ -103,32 +108,32 @@ export default function DynamicProject(): ReactElement {
 					{isLargerDevice && images}
 					<hr />
 					<div className='d-flex flex-row justify-content-start align-items-center flex-wrap'>
-						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<IoLogoReact className='me-2' />
 							<Trans i18nKey='react' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<SiTypescript className='me-2' />
 							<Trans i18nKey='typescript' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<IoLogoNodejs className='me-2' />
 							<Trans i18nKey='nodejs' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<SiExpress className='me-2' />
 							<Trans i18nKey='express' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<SiMysql className='me-2' />
 							<Trans i18nKey='mysql' ns='Projects.Dynamic' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'my-2 ', 'me-2', b['badge']].join(' ')}>
 							<SiPostgresql className='me-2' />
 							<Trans i18nKey='postgresql' ns='Projects.Dynamic' lang={lang} />
 						</div>
 					</div>
-					<div className='py-5'>
+					<div className='py-5' data-aos='fade-up'>
 						<p><Trans i18nKey='description' ns='Projects.Dynamic' lang={lang} /></p>
 					</div>
 				</Col>
