@@ -9,7 +9,7 @@ export default function ToolsCardDCDev(props: { cardClasses?: string }): ReactEl
 	const lang = useLanguage();
 	const { cardClasses } = props;
 	return (
-		<Card className={cardClasses} data-aos="zoom-in">
+		<Card className={cardClasses} data-aos='zoom-in'>
 			<Card.Title className='h4'>
 				<Trans i18nKey='title' ns='Tools.Other' lang={lang} />
 			</Card.Title>
