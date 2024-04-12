@@ -11,7 +11,7 @@ export default function ToolsCardDatabase(props: { cardClasses?: string }): Reac
 	const { cardClasses } = props;
 
 	return (
-		<Card className={cardClasses}>
+		<Card className={cardClasses} data-aos="zoom-in">
 			<Card.Title className='h4'>
 				<Trans i18nKey='title' ns='Tools.Database' lang={lang} />
 			</Card.Title>

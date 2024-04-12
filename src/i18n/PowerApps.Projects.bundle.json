@@ -6,10 +6,20 @@
 	},
 	"en": {
 		"application": "Client manager (Powerapps to CRM)",
-		"description": "Application for the administration and creation of relationships between clients of an accounting company, it was part of the CRM system that the company was trying to adapt and implement for self-management and interactive graphic search."
+		"description": "Application for the administration and creation of relationships between clients of an accounting company, it was part of the CRM system that the company was trying to adapt and implement for self-management and interactive graphic search.",
+		"sharepoint": "SharePoint",
+		"powerapps": "PowerApps",
+		"powerfx": "PowerFx",
+		"excel": "Excel",
+		"json": "JSON"
 	},
 	"es": {
 		"application": "Gestor de clientes (Powerapps a CRM)",
-		"description": "Aplicación para la administración y creación de relaciones entre clientes de una empresa de contabilidad, fue parte del sistema CRM que la empresa estaba tratando de adaptar e implementar para la autogestión y busqueda gráfica interactiva."
+		"description": "Aplicación para la administración y creación de relaciones entre clientes de una empresa de contabilidad, fue parte del sistema CRM que la empresa estaba tratando de adaptar e implementar para la autogestión y busqueda gráfica interactiva.",
+		"sharepoint": "SharePoint",
+		"powerapps": "PowerApps",
+		"powerfx": "PowerFx",
+		"excel": "Excel",
+		"json": "JSON"
 	}
 }

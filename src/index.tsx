@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { ReactElement, StrictMode } from 'react';
+import AOS from 'aos';
 
 import NavigationProvider from './components/hooks/NavigationContext';
 import ParallaxCard from './components/ParallaxCard';
@@ -13,26 +14,28 @@ import Home from './components/Home';
 import 'modern-normalize/modern-normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@splidejs/react-splide/dist/css/splide.min.css';
+import 'aos/dist/aos.css';
 
 import './i18n/i18n.config';
+AOS.init();
 
 const colors = new URL(
-	'./styles/resources/colors.png?width=2048',
+	'./styles/resources/colors.jpg?width=2048',
 	import.meta.url,
 );
 
 const threehundreds = new URL(
-	'./styles/resources/threehundreds.png?width=2048',
+	'./styles/resources/threehundreds.jpg?width=2048',
 	import.meta.url,
 );
 
 const lighthand = new URL(
-	'./styles/resources/lighthand.png?width=2048',
+	'./styles/resources/lighthand.jpg?width=2048',
 	import.meta.url,
 );
 
 const abstractshapes = new URL(
-	'./styles/resources/abstractshapes.webp?width=2048',
+	'./styles/resources/abstractshapes.jpg?width=2048',
 	import.meta.url,
 );
 

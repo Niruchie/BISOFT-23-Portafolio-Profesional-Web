@@ -6,10 +6,14 @@
 	},
 	"en": {
 		"title": "Projects",
+		"description1": "Every project is an opportunity to learn and grow.",
+		"description2": "Explore my journey as a developer and discover how I've applied my skills to create increasingly efficient and impactful technological solutions.",
 		"clickToClose": "Click here to close"
 	},
 	"es": {
 		"title": "Proyectos",
+		"description1": "Cada proyecto es una oportunidad para aprender y crecer.",
+		"description2": "Explora mi trayectoria como desarrollador y descubre cómo he aplicado mis habilidades para crear soluciones tecnológicas cada vez más eficientes e impactantes.",
 		"clickToClose": "Haga clic aquí para cerrar"
 	}
 }

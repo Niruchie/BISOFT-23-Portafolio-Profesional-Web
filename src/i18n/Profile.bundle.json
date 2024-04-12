@@ -6,24 +6,28 @@
 	},
 	"en": {
 		"title": "Profile",
+		"description1": "Passionate about technology and with a solid experience in fullstack development, I seek to contribute to the success of an innovative team.",
+		"description2": "My focus on quality, efficiency, and problem-solving allows me to deliver technological solutions that make a real impact.",
 		"name": "Anthony Padilla",
 		"grade": "Fullstack software developer",
 		"gradeSub": "and network administrator...",
 		"experience": "Three years of experience",
 		"experienceDescription": "Developing applications for a multinational company, I am looking to grow my career to reach my goals. I am mainly a Node.Js and React developer, but I can work on more robust platforms such as C# or Python. I also have a focus on managing databases mostly from PosgresSQL, with collateral experience in MySQL and SQL Server",
 		"demostration": "Check my resume!",
-		"demostrationSub": "If you want to know more about me, you can see my resume in the previous link. I will prove to be the best candidate for your project.",
-		"lookAtTheColors": "Look at the colors..."
+		"demostrationSub": "If you want to know more about me, you can see my resume in the following link.",
+		"lookAtTheColors": "Enter"
 	},
 	"es": {
 		"title": "Perfil",
+		"description1": "Apasionado por la tecnología y con una sólida experiencia en desarrollo fullstack, busco contribuir al éxito de un equipo innovador.",
+		"description2": "Mi enfoque en calidad, eficiencia y resolución de problemas me permite entregar soluciones tecnológicas que generan un impacto real.",
 		"name": "Anthony Padilla",
 		"grade": "Desarrollador de software fullstack",
 		"gradeSub": "y administrador de redes...",
 		"experience": "Tres años de experiencia",
 		"experienceDescription": "Desarrollando aplicaciones para una empresa multinacional, estoy buscando hacer crecer mi carrera para alcanzar mis objetivos. Principalmente soy desarrollador de Node.Js y React, pero me puedo desenvolver durante el trabajo en plataformas más robustas como lo son C# o Python. También tengo enfoques en el manejo de bases de datos mayormente de PosgresSQL, con experiencia colateral en MySQL y SQL Server",
 		"demostration": "¡Mira mi curriculum!",
-		"demostrationSub": "Si quieres saber más sobre mi, puedes ver mi curriculum en el enlace anterior. Demostraré ser el mejor candidato para tu proyecto.",
-		"lookAtTheColors": "Mira los colores..."
+		"demostrationSub": "Si quieres saber más sobre mi, puedes ver mi curriculum en el enlace siguiente.",
+		"lookAtTheColors": "Ingresar"
 	}
 }

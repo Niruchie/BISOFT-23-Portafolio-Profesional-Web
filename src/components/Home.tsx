@@ -14,7 +14,7 @@ import * as font from '../styles/webfonts/fonts.module.scss';
 import * as b from '../styles/Home.module.scss';
 
 const colors = new URL(
-	'../styles/resources/colors.png?width=2048',
+	'../styles/resources/colors.jpg?width=2048',
 	import.meta.url,
 );
 
@@ -26,7 +26,7 @@ export default function Home(): ReactElement {
 	return (
 		<ParallaxCard height={height} backgroundImage={colors.href} extraBgCss={[]}> 
 			<Container fluid ref={refHome} className={['d-flex', 'flex-column', 'justify-content-center', 'align-items-center', 'h-100', 'p-5', b['display']].join(' ')}>
-				<Row className='d-flex flex-column justify-content-center align-items-center'>
+				<Row className='d-flex flex-column justify-content-center align-items-center' data-aos='zoom-in'>
 					<Col className='d-flex justify-content-center align-items-center'>
 						<figure className='rounded p-5'>
 							<img src={LGT} alt='=' width={200} height={200} />

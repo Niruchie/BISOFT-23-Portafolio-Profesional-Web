@@ -144,7 +144,7 @@ export default function Contact(): ReactElement {
 	}, []);
 
 	return (
-		<Container as={Form} className={b['contact'].concat(' ', 'w-100 my-5')} ref={ref}>
+		<Container as={Form} className={b['contact'].concat(' ', 'w-100')} ref={ref}>
 				<Row>
 					<Col sm={12} md={12} lg={6} className='my-4'>
 						<Form.Group controlId='name'>

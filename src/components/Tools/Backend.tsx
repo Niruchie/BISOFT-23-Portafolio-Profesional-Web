@@ -11,7 +11,7 @@ export default function ToolsCardBackend(props: { cardClasses?: string }): React
 	const { cardClasses } = props;
 
 	return (
-		<Card className={cardClasses}>
+		<Card className={cardClasses} data-aos="zoom-in">
 			<Card.Title className='h4'>
 				<Trans i18nKey='title' ns='Tools.Backend' lang={lang} />
 			</Card.Title>

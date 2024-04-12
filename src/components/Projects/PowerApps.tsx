@@ -59,26 +59,31 @@ export default function PowerAppsProject(): ReactElement {
 		<Row key='asesores' className={isLargerDevice ? 'mb-3' : 'mt-3'}>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={PowerApps2.href} width='100%'
 					onClick={() => open(1)} />
 			</Col>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={PowerApps3.href} width='100%'
 					onClick={() => open(2)} />
 			</Col>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={PowerApps4.href} width='100%'
 					onClick={() => open(3)} />
 			</Col>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={PowerApps5.href} width='100%'
 					onClick={() => open(4)} />
 			</Col>
 			<Col>
 				<img className='rounded border'
+					data-aos='flip-up'
 					src={PowerApps6.href} width='100%'
 					onClick={() => open(5)} />
 			</Col>
@@ -94,7 +99,7 @@ export default function PowerAppsProject(): ReactElement {
 			</Row>
 			<Row>
 				<Col className='p-2' lg='6'>
-					<img className={['rounded', b['border']].join(' ')}
+					<img className={['rounded', b['border']].join(' ')} data-aos='zoom-in-down'
 						src={PowerApps1.href} width='100%' onClick={() => open(0)} />
 
 					{!isLargerDevice && images}
@@ -103,28 +108,28 @@ export default function PowerAppsProject(): ReactElement {
 					{isLargerDevice && images}
 					<hr />
 					<div className='d-flex flex-row justify-content-start align-items-center flex-wrap'>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
 							<SiJson className='me-2' />
 							<Trans i18nKey='json' ns='Projects.PowerApps' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
 							<SiPowerfx className='me-2' />
-							<Trans i18nKey='powerfx' ns='Projects.Dynamic' lang={lang} />
+							<Trans i18nKey='powerfx' ns='Projects.PowerApps' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
 							<ImFileExcel className='me-2' />
 							<Trans i18nKey='excel' ns='Projects.PowerApps' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
 							<SiPowerapps className='me-2' />
 							<Trans i18nKey='powerapps' ns='Projects.PowerApps' lang={lang} />
 						</div>
-						<div className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
+						<div data-aos='fade-left' className={['text-white', 'badge', 'me-2', b['badge']].join(' ')}>
 							<SiMicrosoftsharepoint className='me-2' />
 							<Trans i18nKey='sharepoint' ns='Projects.PowerApps' lang={lang} />
 						</div>
 					</div>
-					<div className='py-5'>
+					<div className='py-5' data-aos='fade-up'>
 						<p><Trans i18nKey='description' ns='Projects.PowerApps' lang={lang} /></p>
 					</div>
 				</Col>
