@@ -13,6 +13,7 @@ import ToolsOther from './Other.Tools.bundle.json';
 import Projects from './Projects.bundle.json';
 import ProjectsDynamic from './Dynamic.Projects.bundle.json';
 import ProjectsPowerApps from './PowerApps.Projects.bundle.json';
+import ProjectsVortex from './Vortex.Projects.bundle.json';
 import Footer from './Footer.bundle.json';
 
 i18n
@@ -36,6 +37,7 @@ i18n
 	Projects,
 	ProjectsDynamic,
 	ProjectsPowerApps,
+	ProjectsVortex,
 	Footer,
 ]
 	.forEach(bundle => {

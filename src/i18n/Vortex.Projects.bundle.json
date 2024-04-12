@@ -1,0 +1,23 @@
+{
+	"$meta": {
+		"name": "Projects.Vortex",
+		"language": "json",
+		"engine": "i18n"
+	},
+	"en": {
+		"application": "Vortex video game",
+		"description": "Vortex is a 2D action and adventure video game, in which the player controls a character that must overcome obstacles and enemies to reach the end of each level. The game has a story that unfolds throughout the levels, in which the player must repair his spaceship to be able to return to his home planet.",
+		"unity": "Unity",
+		"csharp": "C#",
+		"json": "JSON",
+		"tile": "Tile"
+	},
+	"es": {
+		"application": "Videojuego Vortex",
+		"description": "Vortex es un videojuego de acción y aventura en 2D, en el que el jugador controla a un personaje que debe superar obstáculos y enemigos para llegar al final de cada nivel. El juego cuenta con una historia que se desarrolla a lo largo de los niveles, en el que el jugador debe reparar su nave espacial para poder regresar a su planeta natal.",
+		"unity": "Unity",
+		"csharp": "C#",
+		"json": "JSON",
+		"tile": "Tile"
+	}
+}

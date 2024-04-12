@@ -7,11 +7,11 @@
 	"en": {
 		"title": "My toolbox",
 		"description1": "As a full-stack developer, I have a wide range of tools at my disposal.",
-		"description2": "Here are some of the tools I use on a regular basis. Click on the cards to learn more about each tool."
+		"description2": "Here are some of the tools I use on a regular basis. Each card contains more information about the tool."
 	},
 	"es": {
 		"title": "Mis herramientas",
 		"description1": "Como desarrollador full-stack, tengo una amplia gama de herramientas a mi disposición.",
-		"description2": "Estas son algunas de las herramientas que uso regularmente. Haz clic en las tarjetas para obtener más información sobre cada herramienta."
+		"description2": "Estas son algunas de las herramientas que uso regularmente. Cada tarjeta contiene más información acerca de la herramienta."
 	}
 }
